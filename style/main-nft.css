@@ -1,0 +1,231 @@
+:root {
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --color-bg-main: hsl(217, 54%, 11%);
+  --color-bg-card: hsl(216, 50%, 16%);
+  --color-line: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+}
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Outfit", sans-serif;
+}
+body {
+  background-color: var(--color-bg-main);
+  color: white; /* to see text temp! */
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media (min-width: 786px) {
+  .container {
+    /* width: 750px; */
+    width: 375px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Card */
+.container .card {
+  width: 375px * 2;
+  border-radius: 10px;
+  background-color: var(--color-bg-card);
+  cursor: pointer;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .container .card {
+    width: 300px;
+  }
+}
+/* Start Img */
+.container .card .img-on-hover {
+  padding: 20px;
+  margin-bottom: 0;
+}
+.container .card .img-on-hover .image {
+  position: relative;
+  width: 375px;
+  height: 375px;
+  border-radius: 10px;
+  background-size: 375px;
+  margin-bottom: 0;
+  background-position: center;
+  background-image: url("../images/image-equilibrium.jpg");
+}
+@media (max-width: 767px) {
+  .container .card .img-on-hover .image {
+    width: 260px;
+    height: 260px;
+    background-size: 260px;
+  }
+}
+.container .card .img-on-hover .image .hover-above-img {
+  width: 375px;
+  height: 375px;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin-bottom: 0;
+  transform: translate(-50%, -50%);
+  background-color: var(--Cyan);
+}
+@media (max-width: 767px) {
+  .container .card .img-on-hover .image .hover-above-img {
+    width: 260px;
+    height: 260px;
+  }
+}
+.container .card .img-on-hover .image:hover .hover-above-img {
+  opacity: 0.5;
+  visibility: visible;
+}
+.container .card .img-on-hover .image .eye-svg {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 5;
+  margin-bottom: 0;
+  transform: translate(-50%, -50%);
+}
+.container .card .img-on-hover .image:hover .eye-svg {
+  opacity: 1;
+  visibility: visible;
+}
+.container .card .img-on-hover .image img {
+  margin-bottom: 0;
+}
+/* End Img */
+/* Start Text */
+.container .card .text {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .container .card .text {
+    font-size: 14px;
+  }
+}
+.container .card .text .title {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .container .card .text .title {
+  }
+}
+.container .card .text .description {
+  /* color: var(--color-line); */
+  width: 375px;
+  font-size: 20px;
+  padding-left: 20px;
+  font-weight: 400;
+  color: var(--Soft_blue);
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .container .card .text .description {
+    width: 260px;
+    font-size: 15px;
+
+  }
+}
+/* End Text */
+/* Start Price */
+.container .card .info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.container .card .info .price-box {
+}
+.container .card .info .price-box .price {
+  color: var(--Cyan);
+  font-weight: 600;
+}
+.container .card .info .time-to-left {
+  color: var(--Soft_blue);
+}
+.container .card .info .time-to-left i .remaning {
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+/* End Price */
+/* Start User Info */
+.container .card hr {
+  width: 375px;
+  height: 2px;
+  border: none;
+  background-color: var(--color-line);
+}
+@media (max-width: 767px) {
+  .container .card hr {
+    width: 260px;
+    font-size: 15px;
+  }
+}
+.container .card .userInfo {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.container .card .userInfo img {
+  margin: 20px;
+  width: 60px;
+  border-radius: 30px;
+  border: 3px solid var(--color-white);
+}
+@media (max-width: 767px) {
+  .container .card .userInfo img {
+    
+  }
+}
+.container .card .userInfo .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .userInfo .text p {
+  color: var(--Soft_blue);
+}
+.container .card .userInfo .Name {
+  margin: 5px;
+}
+/* End User Info */
+/* End Card */
